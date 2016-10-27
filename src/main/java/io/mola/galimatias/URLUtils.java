@@ -176,7 +176,8 @@ public final class URLUtils {
                     break;
                 case HYPHEN_3_4:
                     msg = "A label contains hyphen-minus ('-') in the third and fourth positions.";
-                    break;
+                    //break;
+                    return;
                 case INVALID_ACE_LABEL:
                     msg = "An ACE label does not contain a valid label string.";
                     break;
@@ -191,13 +192,15 @@ public final class URLUtils {
                     break;
                 case LEADING_HYPHEN:
                     msg = "A label starts with a hyphen-minus ('-').";
-                    break;
+                    //break;
+                    return;
                 case PUNYCODE:
                     msg = "A label starts with \"xn--\" but does not contain valid Punycode.";
                     break;
                 case TRAILING_HYPHEN:
                     msg = "A label ends with a hyphen-minus ('-').";
-                    break;
+                    //break;
+                    return;
                 default:
                     msg = "IDNA error.";
                     break;
